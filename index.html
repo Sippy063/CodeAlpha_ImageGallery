@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Sheet — Image Gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-head">
+    <p class="frame-no">No. 24 — Roll B</p>
+    <h1>Contact Sheet</h1>
+    <p class="sub">A small archive of frames, sorted by subject.</p>
+  </header>
+
+  <nav class="filters" aria-label="Filter by category">
+    <button class="filter-btn active" data-filter="all">All frames</button>
+    <button class="filter-btn" data-filter="nature">Nature</button>
+    <button class="filter-btn" data-filter="city">City</button>
+    <button class="filter-btn" data-filter="people">People</button>
+    <button class="filter-btn" data-filter="food">Food</button>
+  </nav>
+
+  <main class="strip" id="gallery">
+    <!-- Gallery items are injected by script.js -->
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous image">&#10094;</button>
+    <figure class="lb-figure">
+      <img src="" alt="" id="lbImage">
+      <figcaption id="lbCaption"></figcaption>
+    </figure>
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Next image">&#10095;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
